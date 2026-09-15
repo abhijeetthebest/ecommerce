@@ -1,0 +1,217 @@
+/* General Styles */
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 12px;
+    margin: 0;
+    padding: 0;
+    background-color: #f5f5f5;
+}
+
+a {
+    color: #0066cc;
+    text-decoration: none;
+}
+
+a:hover {
+    text-decoration: underline;
+}
+
+.button {
+    background-color: #0066cc;
+    color: #ffffff;
+    border: none;
+    padding: 5px 10px;
+    cursor: pointer;
+    border-radius: 3px;
+}
+
+.button:hover {
+    background-color: #0055aa;
+}
+
+/* Header Styles */
+#header {
+    background-color: #333333;
+    color: #ffffff;
+    padding: 10px;
+    height: 80px;
+}
+
+#logo {
+    float: left;
+    width: 200px;
+}
+
+#navigation {
+    float: left;
+    width: 500px;
+}
+
+#navigation ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+}
+
+#navigation li {
+    display: inline;
+    margin-right: 20px;
+}
+
+#navigation a {
+    color: #ffffff;
+    text-decoration: none;
+}
+
+#navigation a:hover {
+    text-decoration: underline;
+}
+
+#search {
+    float: right;
+    width: 300px;
+    text-align: right;
+}
+
+/* Breadcrumb Styles */
+#breadcrumb {
+    background-color: #eeeeee;
+    padding: 5px 10px;
+    border-bottom: 1px solid #cccccc;
+}
+
+/* Content Styles */
+#content {
+    padding: 10px;
+    background-color: #ffffff;
+    min-height: 400px;
+}
+
+/* Footer Styles */
+#footer {
+    background-color: #333333;
+    color: #ffffff;
+    padding: 10px;
+    text-align: center;
+}
+
+#footerLinks ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+}
+
+#footerLinks li {
+    display: inline;
+    margin-right: 20px;
+}
+
+#footerLinks a {
+    color: #ffffff;
+    text-decoration: none;
+}
+
+#footerLinks a:hover {
+    text-decoration: underline;
+}
+
+#copyright {
+    margin-top: 10px;
+    font-size: 10px;
+}
+
+/* Table Styles */
+table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+td {
+    padding: 5px;
+}
+
+.listhead {
+    background-color: #333333;
+    color: #ffffff;
+    font-weight: bold;
+}
+
+.listsubhead {
+    background-color: #666666;
+    color: #ffffff;
+    font-weight: bold;
+}
+
+.e {
+    background-color: #666666;
+    color: #ffffff;
+    font-weight: bold;
+}
+
+.tiny {
+    font-size: 11px;
+}
+
+.softresults {
+    border: 1px solid #cccccc;
+}
+
+.softresults td {
+    border: 1px solid #cccccc;
+}
+
+.linkonDark {
+    color: #ffffff;
+    text-decoration: none;
+}
+
+.linkonDark:hover {
+    text-decoration: underline;
+}
+
+/* Form Styles */
+.label {
+    font-weight: bold;
+    text-align: right;
+    vertical-align: top;
+}
+
+.field {
+    vertical-align: top;
+}
+
+.required {
+    color: #ff0000;
+    margin-left: 5px;
+}
+
+input[type="text"], textarea, select {
+    border: 1px solid #cccccc;
+    padding: 3px;
+}
+
+/* Error Styles */
+.errorContainer {
+    border: 1px solid #ff0000;
+    padding: 10px;
+    margin: 10px 0;
+    background-color: #ffeeee;
+}
+
+.errorDetails {
+    margin: 10px 0;
+}
+
+.stackTrace {
+    font-family: monospace;
+    font-size: 10px;
+    border: 1px solid #cccccc;
+    padding: 5px;
+    background-color: #f5f5f5;
+    height: 200px;
+    overflow: auto;
+}
+
+.errorActions {
+    margin-top: 10px;
+}

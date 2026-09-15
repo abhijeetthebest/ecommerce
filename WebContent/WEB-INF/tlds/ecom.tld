@@ -1,0 +1,201 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<taglib xmlns="http://java.sun.com/xml/ns/javaee"
+        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+        xsi:schemaLocation="http://java.sun.com/xml/ns/javaee http://java.sun.com/xml/ns/javaee/web-jsptaglibrary_2_1.xsd"
+        version="2.1">
+        
+    <tlib-version>1.0</tlib-version>
+    <short-name>ecom</short-name>
+    <uri>/WEB-INF/tlds/ecom.tld</uri>
+    
+    <!-- Form Tag -->
+    <tag>
+        <name>form</name>
+        <tag-class>com.ecommerce.presentation.tag.FormTag</tag-class>
+        <body-content>JSP</body-content>
+        <attribute>
+            <name>name</name>
+            <required>true</required>
+            <rtexprvalue>true</rtexprvalue>
+        </attribute>
+        <attribute>
+            <name>action</name>
+            <required>true</required>
+            <rtexprvalue>true</rtexprvalue>
+        </attribute>
+        <attribute>
+            <name>flow</name>
+            <required>true</required>
+            <rtexprvalue>true</rtexprvalue>
+        </attribute>
+        <attribute>
+            <name>flowAction</name>
+            <required>true</required>
+            <rtexprvalue>true</rtexprvalue>
+        </attribute>
+        <attribute>
+            <name>method</name>
+            <required>true</required>
+            <rtexprvalue>true</rtexprvalue>
+        </attribute>
+        <attribute>
+            <name>scope</name>
+            <required>false</required>
+            <rtexprvalue>true</rtexprvalue>
+        </attribute>
+        <attribute>
+            <name>validate</name>
+            <required>false</required>
+            <rtexprvalue>true</rtexprvalue>
+        </attribute>
+    </tag>
+    
+    <!-- Table Tag -->
+    <tag>
+        <name>table</name>
+        <tag-class>com.ecommerce.presentation.tag.TableTag</tag-class>
+        <body-content>JSP</body-content>
+        <attribute>
+            <name>tableType</name>
+            <required>false</required>
+            <rtexprvalue>true</rtexprvalue>
+        </attribute>
+    </tag>
+    
+    <!-- Results Table Tag -->
+    <tag>
+        <name>resultsTable</name>
+        <tag-class>com.ecommerce.presentation.tag.ResultsTableTag</tag-class>
+        <body-content>JSP</body-content>
+        <attribute>
+            <name>tableName</name>
+            <required>true</required>
+            <rtexprvalue>true</rtexprvalue>
+        </attribute>
+        <attribute>
+            <name>displayHeader</name>
+            <required>false</required>
+            <rtexprvalue>true</rtexprvalue>
+        </attribute>
+        <attribute>
+            <name>tableClass</name>
+            <required>false</required>
+            <rtexprvalue>true</rtexprvalue>
+        </attribute>
+        <attribute>
+            <name>rowClass</name>
+            <required>false</required>
+            <rtexprvalue>true</rtexprvalue>
+        </attribute>
+        <attribute>
+            <name>xmlDescriptor</name>
+            <required>true</required>
+            <rtexprvalue>true</rtexprvalue>
+        </attribute>
+        <attribute>
+            <name>mode</name>
+            <required>true</required>
+            <rtexprvalue>true</rtexprvalue>
+        </attribute>
+        <attribute>
+            <name>noResultsText</name>
+            <required>false</required>
+            <rtexprvalue>true</rtexprvalue>
+        </attribute>
+        <attribute>
+            <name>maxRows</name>
+            <required>false</required>
+            <rtexprvalue>true</rtexprvalue>
+        </attribute>
+    </tag>
+    
+    <!-- Label Tag -->
+    <tag>
+        <name>label</name>
+        <tag-class>com.ecommerce.presentation.tag.LabelTag</tag-class>
+        <body-content>empty</body-content>
+        <attribute>
+            <name>property</name>
+            <required>true</required>
+            <rtexprvalue>true</rtexprvalue>
+        </attribute>
+        <attribute>
+            <name>valueObject</name>
+            <required>false</required>
+            <rtexprvalue>true</rtexprvalue>
+        </attribute>
+    </tag>
+    
+    <!-- Hidden Tag -->
+    <tag>
+        <name>hidden</name>
+        <tag-class>com.ecommerce.presentation.tag.HiddenTag</tag-class>
+        <body-content>empty</body-content>
+        <attribute>
+            <name>property</name>
+            <required>true</required>
+            <rtexprvalue>true</rtexprvalue>
+        </attribute>
+        <attribute>
+            <name>value</name>
+            <required>true</required>
+            <rtexprvalue>true</rtexprvalue>
+        </attribute>
+    </tag>
+    
+    <!-- Save Button Tag -->
+    <tag>
+        <name>savebutton</name>
+        <tag-class>com.ecommerce.presentation.tag.SaveButtonTag</tag-class>
+        <body-content>empty</body-content>
+        <attribute>
+            <name>formName</name>
+            <required>true</required>
+            <rtexprvalue>true</rtexprvalue>
+        </attribute>
+    </tag>
+    
+    <!-- Cancel Button Tag -->
+    <tag>
+        <name>cancelbutton</name>
+        <tag-class>com.ecommerce.presentation.tag.CancelButtonTag</tag-class>
+        <body-content>empty</body-content>
+        <attribute>
+            <name>flow</name>
+            <required>true</required>
+            <rtexprvalue>true</rtexprvalue>
+        </attribute>
+        <attribute>
+            <name>flowAction</name>
+            <required>true</required>
+            <rtexprvalue>true</rtexprvalue>
+        </attribute>
+    </tag>
+    
+    <!-- Order History Tag -->
+    <tag>
+        <name>orderHistory</name>
+        <tag-class>com.ecommerce.presentation.tag.OrderHistoryTag</tag-class>
+        <body-content>empty</body-content>
+        <attribute>
+            <name>orderEntryType</name>
+            <required>true</required>
+            <rtexprvalue>true</rtexprvalue>
+        </attribute>
+        <attribute>
+            <name>orderEntryIdFieldName</name>
+            <required>true</required>
+            <rtexprvalue>true</rtexprvalue>
+        </attribute>
+        <attribute>
+            <name>isRequired</name>
+            <required>false</required>
+            <rtexprvalue>true</rtexprvalue>
+        </attribute>
+        <attribute>
+            <name>workQueueDisabled</name>
+            <required>false</required>
+            <rtexprvalue>true</rtexprvalue>
+        </attribute>
+    </tag>
+</taglib>

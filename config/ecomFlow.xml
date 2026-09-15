@@ -1,0 +1,143 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<flows>
+    <!-- Customer Maintenance Flow -->
+    <flow id="CustomerMaintenance">
+        <action name="DisplayCustomerSummary" sequence="1" displayName="Display Customer Summary">
+            <view name="WEB">
+                <command>com.ecommerce.presentation.command.customer.DisplayCustomerSummaryCommand</command>
+                <success>/customer/maintainCustomerInformation.jsp</success>
+                <failure>/error.jsp</failure>
+                <valueobjectname>customerSummaryVO</valueobjectname>
+                <valueobjectclass>com.ecommerce.view.customer.CustomerSummaryVO</valueobjectclass>
+                <valueobjectresult>customermaintenance.customerSummaryVO</valueobjectresult>
+                <permission>true</permission>
+            </view>
+        </action>
+        
+        <action name="OrderHistoryAdd" sequence="71" displayName="Add Customer Order History">
+            <view name="WEB">
+                <command>com.ecommerce.presentation.command.customer.OrderHistoryAddCommand</command>
+                <success>/customer/addOrderHistory.jsp</success>
+                <failure>/error.jsp</failure>
+                <valueobjectname>customerSummaryVO</valueobjectname>
+                <valueobjectclass>com.ecommerce.view.customer.CustomerSummaryVO</valueobjectclass>
+                <valueobjectresult>orderHistoryVO</valueobjectresult>
+                <permission>true</permission>
+            </view>
+        </action>
+        
+        <action name="OrderHistoryAddSave" sequence="72" displayName="Save Customer Order History">
+            <view name="WEB">
+                <command>com.ecommerce.presentation.command.customer.OrderHistorySaveAddCommand</command>
+                <success>/customer/maintainCustomerInformation.jsp</success>
+                <failure>/error.jsp</failure>
+                <valueobjectname>orderHistoryVO</valueobjectname>
+                <valueobjectclass>com.ecommerce.view.customer.OrderHistoryVO</valueobjectclass>
+                <valueobjectresult>orderHistoryVO</valueobjectresult>
+                <permission>true</permission>
+            </view>
+        </action>
+        
+        <action name="OrderHistoryWQAdd" sequence="73" displayName="Add Customer Order History with Work Queue">
+            <view name="WEB">
+                <command>com.ecommerce.presentation.command.customer.OrderHistoryWQAddCommand</command>
+                <success>/customer/addOrderHistoryWorkQueue.jsp</success>
+                <failure>/error.jsp</failure>
+                <valueobjectname>customerSummaryVO</valueobjectname>
+                <valueobjectclass>com.ecommerce.view.customer.CustomerSummaryVO</valueobjectclass>
+                <valueobjectresult>orderHistoryVO</valueobjectresult>
+                <permission>true</permission>
+            </view>
+        </action>
+        
+        <action name="OrderHistoryMaintain" sequence="74" displayName="Maintain Customer Order History">
+            <view name="WEB">
+                <command>com.ecommerce.presentation.command.customer.OrderHistoryMaintainCommand</command>
+                <success>/customer/maintainOrderHistory.jsp</success>
+                <failure>/error.jsp</failure>
+                <valueobjectname>customerSummaryVO</valueobjectname>
+                <valueobjectclass>com.ecommerce.view.customer.CustomerSummaryVO</valueobjectclass>
+                <valueobjectresult>viewOrderHistoryVO</valueobjectresult>
+                <permission>true</permission>
+            </view>
+        </action>
+        
+        <action name="OrderHistoryEdit" sequence="75" displayName="Edit Customer Order History">
+            <view name="WEB">
+                <command>com.ecommerce.presentation.command.customer.OrderHistoryEditCommand</command>
+                <success>/customer/editOrderHistory.jsp</success>
+                <failure>/error.jsp</failure>
+                <valueobjectname>viewOrderHistoryVO</valueobjectname>
+                <valueobjectclass>com.ecommerce.view.customer.ViewOrderHistoryVO</valueobjectclass>
+                <valueobjectresult>orderHistoryVO</valueobjectresult>
+                <permission>true</permission>
+            </view>
+        </action>
+        
+        <action name="OrderHistoryEditSave" sequence="76" displayName="Save Edited Customer Order History">
+            <view name="WEB">
+                <command>com.ecommerce.presentation.command.customer.OrderHistoryEditSaveCommand</command>
+                <success>/customer/maintainOrderHistory.jsp</success>
+                <failure>/error.jsp</failure>
+                <valueobjectname>orderHistoryVO</valueobjectname>
+                <valueobjectclass>com.ecommerce.view.customer.OrderHistoryVO</valueobjectclass>
+                <valueobjectresult>viewOrderHistoryVO</valueobjectresult>
+                <permission>true</permission>
+            </view>
+        </action>
+        
+        <action name="Cancel" sequence="90" displayName="Cancel">
+            <view name="WEB">
+                <command>com.ecommerce.presentation.command.customer.CancelCommand</command>
+                <success>/customer/maintainCustomerInformation.jsp</success>
+                <failure>/error.jsp</failure>
+                <valueobjectname>customerSummaryVO</valueobjectname>
+                <valueobjectclass>com.ecommerce.view.customer.CustomerSummaryVO</valueobjectclass>
+                <valueobjectresult>customermaintenance.customerSummaryVO</valueobjectresult>
+                <permission>true</permission>
+            </view>
+        </action>
+        
+        <action name="CancelAddEditOrderHistory" sequence="91" displayName="Cancel Add/Edit Order History">
+            <view name="WEB">
+                <command>com.ecommerce.presentation.command.customer.CancelAddEditOrderHistoryCommand</command>
+                <success>/customer/maintainOrderHistory.jsp</success>
+                <failure>/error.jsp</failure>
+                <valueobjectname>orderHistoryVO</valueobjectname>
+                <valueobjectclass>com.ecommerce.view.customer.OrderHistoryVO</valueobjectclass>
+                <valueobjectresult>viewOrderHistoryVO</valueobjectresult>
+                <permission>true</permission>
+            </view>
+        </action>
+    </flow>
+    
+    <!-- Catalog Management Flow -->
+    <flow id="CatalogManagement">
+        <action name="DisplayCatalogItem" sequence="1" displayName="Display Catalog Item">
+            <view name="WEB">
+                <command>com.ecommerce.presentation.command.catalog.DisplayCatalogItemCommand</command>
+                <success>/catalog/maintainCatalogItem.jsp</success>
+                <failure>/error.jsp</failure>
+                <valueobjectname>catalogItemVO</valueobjectname>
+                <valueobjectclass>com.ecommerce.view.catalog.CatalogItemVO</valueobjectclass>
+                <valueobjectresult>catalogmanagement.catalogItemVO</valueobjectresult>
+                <permission>true</permission>
+            </view>
+        </action>
+    </flow>
+    
+    <!-- Order Management Flow -->
+    <flow id="OrderManagement">
+        <action name="CreateOrder" sequence="1" displayName="Create Order">
+            <view name="WEB">
+                <command>com.ecommerce.presentation.command.order.CreateOrderCommand</command>
+                <success>/order/createOrder.jsp</success>
+                <failure>/error.jsp</failure>
+                <valueobjectname>orderVO</valueobjectname>
+                <valueobjectclass>com.ecommerce.view.order.OrderVO</valueobjectclass>
+                <valueobjectresult>ordermanagement.orderVO</valueobjectresult>
+                <permission>true</permission>
+            </view>
+        </action>
+    </flow>
+</flows>
